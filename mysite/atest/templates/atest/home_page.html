@@ -1,0 +1,23 @@
+{% extends 'atest/layout.html' %}
+
+{% block title %}
+  home-page
+{% endblock %}
+
+
+{% block content %}
+  <br>
+  <h1 align="center">Student:</h1><br>
+  {% for item in students %}
+  <div class="card">
+  <h5 class="card-header">FIO:{{item.fio}}</h5>
+  <div class="card-body">
+    <h5 class="card-title">ID:{{item.student_card}}</h5>
+    <p class="card-text">GPA:{{item.gpa}}</p>
+    <a href="{% url 'read_student' item.id %}" class="btn btn-primary">Show...</a>
+    <a href="{% url 'update_student' item.id %}" class="btn btn-danger">Edit</a>
+    <a href="{% url 'delete_student' item.id %}" class="btn btn-warning">Delete</a>
+  </div>
+    {% endfor %}
+</div>
+{% endblock %}

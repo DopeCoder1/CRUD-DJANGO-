@@ -1,0 +1,18 @@
+{% extends 'atest/layout.html' %}
+
+{% block title %}
+  add-student
+{% endblock %}
+
+
+{% block content %}
+  <h2>add-student:</h2>
+  <form class=""  method="post">
+    {% csrf_token %}
+    {{form.fio}}<br>
+    {{form.student_card}}<br>
+    {{form.gpa}}<br>
+    <span>{{error}}</span>
+    <button class="btn btn-success" type="submit" name="button">Add</button>
+  </form>
+{% endblock %}

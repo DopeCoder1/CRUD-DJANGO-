@@ -1,0 +1,13 @@
+{% extends 'atest/layout.html' %}
+
+{% block title %}
+  {{atestat.fio}}
+{% endblock %}
+
+
+{% block content %}
+  <h2 align="center">Student:</h2>
+  <h2 align="center">FIO: {{atestat.fio}}</h2>
+  <h3 align="center">ID:  {{atestat.student_card}}</h3>
+  <h4 align="center">GPA: {{atestat.gpa}}</h4>
+{% endblock %}

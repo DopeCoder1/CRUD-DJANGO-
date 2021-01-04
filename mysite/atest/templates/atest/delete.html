@@ -1,0 +1,14 @@
+{% extends 'atest/layout.html' %}
+
+{% block title %}
+  delete-student
+{% endblock %}
+
+
+{% block content %}
+  <h2>delete-student:</h2>
+  <form class=""  method="post">
+    {% csrf_token %}
+    <button class="btn btn-warning" type="submit" name="button">Delete</button>
+  </form>
+{% endblock %}
